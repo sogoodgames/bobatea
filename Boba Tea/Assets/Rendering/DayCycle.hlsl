@@ -3,11 +3,14 @@
 
 #include "Packages/com.unity.postprocessing/PostProcessing/Shaders/StdLib.hlsl"
 #include "Packages/com.unity.postprocessing/PostProcessing/Shaders/Sampling.hlsl"
+#include "Packages/com.unity.postprocessing/PostProcessing/Shaders/Colors.hlsl"
 
 // Camera texture 
 TEXTURE2D_SAMPLER2D(_MainTex, sampler_MainTex);
 // Material properties
 float _DayTime;
+float _Saturation;
+float3 _Tint;
 
 struct BasicVertexInput {
     float4 vertex : POSITION;
@@ -57,9 +60,18 @@ BasicVertexOutput DayCycleVertex(BasicVertexInput i) {
 float4 DayCycleFrag(BasicVertexOutput i) : SV_Target
 {
     // regular color 
-    float4 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.screenPos);
+    float3 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.screenPos).rgb;
+    color = NeutralTonemap(color);
 
-    return float4(color.rgb, 1.0);
+    // get blended value for tint and saturation
+    float3 tint = _Tint.rgb;
+    float saturation = _Saturation;
+
+    // apply tint and saturation
+    color *= tint;
+    color = Saturation(color, saturation); 
+
+    return float4(color, 1.0);
 }
 
 #endif //DAY_CYCLE
