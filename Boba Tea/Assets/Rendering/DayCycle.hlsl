@@ -12,11 +12,32 @@ float _DayTime;
 float _MaxTime;
 float _MinTime;
 
-float _Saturation;
-float3 _Tint;
+half4 _Key0;
+half4 _Key1;
+half4 _Key2;
+half4 _Key3;
+half4 _Key4;
+half4 _Key5;
+half4 _Key6;
+half4 _Key7;
 
-float _Saturation2;
-float3 _Tint2;
+float _Time0;
+float _Time1;
+float _Time2;
+float _Time3;
+float _Time4;
+float _Time5;
+float _Time6;
+float _Time7;
+
+float _Time0s;
+float _Time1s;
+float _Time2s;
+float _Time3s;
+float _Time4s;
+float _Time5s;
+float _Time6s;
+float _Time7s;
 
 struct BasicVertexInput {
     float4 vertex : POSITION;
@@ -40,10 +61,38 @@ half3 BlendInRange (float t, float min, float max, half3 a, half3 b) {
     return between(min, max, t) * lerp(a, b, blend);
 }
 
-float BlendInRange (float t, float min, float max, float a, float b) {
+float BlendInRangeA (float t, float min, float max, float a, float b) {
     float blend = (t - min) / (max - min);
     blend = clamp(blend, 0.0, 1.0);
     return between(min, max, t) * lerp(a, b, blend);
+}
+
+half3 EvaluateGradientColor (float t) {
+    half3 color = float3(0, 0, 0);
+
+    color += BlendInRange(t, _Time0, _Time1, _Key0.rgb, _Key1.rgb);
+    color += BlendInRange(t, _Time1, _Time2, _Key1.rgb, _Key2.rgb);
+    color += BlendInRange(t, _Time2, _Time3, _Key2.rgb, _Key3.rgb);
+    color += BlendInRange(t, _Time3, _Time4, _Key3.rgb, _Key4.rgb);
+    color += BlendInRange(t, _Time4, _Time5, _Key4.rgb, _Key5.rgb);
+    color += BlendInRange(t, _Time5, _Time6, _Key5.rgb, _Key6.rgb);
+    color += BlendInRange(t, _Time6, _Time7, _Key6.rgb, _Key7.rgb);
+
+    return color;
+}
+
+float EvaluateGradientAlpha (float t) {
+    float a = 0;
+
+    a += BlendInRangeA(t, _Time0s, _Time1s, _Key0.a, _Key1.a);
+    a += BlendInRangeA(t, _Time1s, _Time2s, _Key1.a, _Key2.a);
+    a += BlendInRangeA(t, _Time2s, _Time3s, _Key2.a, _Key3.a);
+    a += BlendInRangeA(t, _Time3s, _Time4s, _Key3.a, _Key4.a);
+    a += BlendInRangeA(t, _Time4s, _Time5s, _Key4.a, _Key5.a);
+    a += BlendInRangeA(t, _Time5s, _Time6s, _Key5.a, _Key6.a);
+    a += BlendInRangeA(t, _Time6s, _Time7s, _Key6.a, _Key7.a);
+
+    return a;
 }
 
 // Based off of the smoothstep() function
@@ -75,13 +124,16 @@ half4 DayCycleFrag(BasicVertexOutput i) : SV_Target
     half3 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.screenPos).rgb;
     color = NeutralTonemap(color);
 
-    // get blended value for tint and saturation
-    half3 tint = BlendInRange(_DayTime, _MinTime, _MaxTime, _Tint.rgb, _Tint2.rgb);
-    float saturation = BlendInRange(_DayTime, _MinTime, _MaxTime, _Saturation, _Saturation2);
+    // get linear value for time
+    float time = (_DayTime - _MinTime) / (_MaxTime - _MinTime);
+
+    // get gradient values
+    half3 tint = EvaluateGradientColor(time);
+    float saturation = EvaluateGradientAlpha(time);
 
     // apply tint and saturation
     color *= tint;
-    color = Saturation(color, saturation); 
+    //color = Saturation(color, saturation); 
 
     return half4(color, 1.0);
 }

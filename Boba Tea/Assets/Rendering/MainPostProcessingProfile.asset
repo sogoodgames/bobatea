@@ -34,12 +34,84 @@ MonoBehaviour:
   time:
     overrideState: 0
     value: 0
-  tint:
+  minTime:
+    overrideState: 0
+    value: 0
+  maxTime:
+    overrideState: 0
+    value: 24
+  key0:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
-  saturation:
+  key1:
     overrideState: 0
-    value: 0.5
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key2:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key3:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key4:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key5:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key6:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key7:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  time0:
+    overrideState: 0
+    value: 0
+  time1:
+    overrideState: 0
+    value: 0
+  time2:
+    overrideState: 0
+    value: 0
+  time3:
+    overrideState: 0
+    value: 0
+  time4:
+    overrideState: 0
+    value: 0
+  time5:
+    overrideState: 0
+    value: 0
+  time6:
+    overrideState: 0
+    value: 0
+  time7:
+    overrideState: 0
+    value: 0
+  time0s:
+    overrideState: 0
+    value: 0
+  time1s:
+    overrideState: 0
+    value: 0
+  time2s:
+    overrideState: 0
+    value: 0
+  time3s:
+    overrideState: 0
+    value: 0
+  time4s:
+    overrideState: 0
+    value: 0
+  time5s:
+    overrideState: 0
+    value: 0
+  time6s:
+    overrideState: 0
+    value: 0
+  time7s:
+    overrideState: 0
+    value: 0
 --- !u!114 &1845428618320073712
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1370,12 +1442,84 @@ MonoBehaviour:
   time:
     overrideState: 1
     value: 0
-  tint:
-    overrideState: 1
-    value: {r: 0.5456123, g: 0.57803756, b: 0.6320754, a: 1}
-  saturation:
-    overrideState: 1
-    value: 0.919
+  minTime:
+    overrideState: 0
+    value: 0
+  maxTime:
+    overrideState: 0
+    value: 24
+  key0:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key1:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key2:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key3:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key4:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key5:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key6:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  key7:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  time0:
+    overrideState: 0
+    value: 0
+  time1:
+    overrideState: 0
+    value: 0
+  time2:
+    overrideState: 0
+    value: 0
+  time3:
+    overrideState: 0
+    value: 0
+  time4:
+    overrideState: 0
+    value: 0
+  time5:
+    overrideState: 0
+    value: 0
+  time6:
+    overrideState: 0
+    value: 0
+  time7:
+    overrideState: 0
+    value: 0
+  time0s:
+    overrideState: 0
+    value: 0
+  time1s:
+    overrideState: 0
+    value: 0
+  time2s:
+    overrideState: 0
+    value: 0
+  time3s:
+    overrideState: 0
+    value: 0
+  time4s:
+    overrideState: 0
+    value: 0
+  time5s:
+    overrideState: 0
+    value: 0
+  time6s:
+    overrideState: 0
+    value: 0
+  time7s:
+    overrideState: 0
+    value: 0
 --- !u!114 &4964689902761474853
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1393,11 +1537,83 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   time:
+    overrideState: 1
+    value: 24
+  minTime:
+    overrideState: 1
+    value: 0
+  maxTime:
+    overrideState: 1
+    value: 24
+  key0:
+    overrideState: 1
+    value: {r: 0.5411765, g: 0.58431375, b: 0.8235294, a: 1}
+  key1:
+    overrideState: 1
+    value: {r: 0.8596177, g: 0.78039217, b: 0.9137255, a: 1}
+  key2:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 0}
+  key3:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 0}
+  key4:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 0}
+  key5:
+    overrideState: 1
+    value: {r: 0.9056604, g: 0.7230708, b: 0.63652545, a: 0}
+  key6:
+    overrideState: 1
+    value: {r: 0.53813636, g: 0.58179307, b: 0.8207547, a: 0}
+  key7:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  time0:
+    overrideState: 1
+    value: 0
+  time1:
+    overrideState: 1
+    value: 0.202945
+  time2:
+    overrideState: 1
+    value: 0.2500038
+  time3:
+    overrideState: 1
+    value: 0.5029374
+  time4:
+    overrideState: 1
+    value: 0.7117723
+  time5:
+    overrideState: 1
+    value: 0.7764706
+  time6:
+    overrideState: 1
+    value: 1
+  time7:
+    overrideState: 1
+    value: -1
+  time0s:
     overrideState: 0
     value: 0
-  tint:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
-  saturation:
+  time1s:
     overrideState: 0
     value: 1
+  time2s:
+    overrideState: 0
+    value: -1
+  time3s:
+    overrideState: 0
+    value: -1
+  time4s:
+    overrideState: 0
+    value: -1
+  time5s:
+    overrideState: 0
+    value: -1
+  time6s:
+    overrideState: 0
+    value: -1
+  time7s:
+    overrideState: 0
+    value: -1
