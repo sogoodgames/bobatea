@@ -130,6 +130,33 @@ public class DayCycleSettingsEditor : PostProcessEffectEditor<DayCycleSettings>
             }
         }
 
+        m_key0.overrideState.boolValue = true;
+        m_key1.overrideState.boolValue = true;
+        m_key2.overrideState.boolValue = true;
+        m_key3.overrideState.boolValue = true;
+        m_key4.overrideState.boolValue = true;
+        m_key5.overrideState.boolValue = true;
+        m_key6.overrideState.boolValue = true;
+        m_key7.overrideState.boolValue = true;
+
+        m_time0.overrideState.boolValue = true;
+        m_time1.overrideState.boolValue = true;
+        m_time2.overrideState.boolValue = true;
+        m_time3.overrideState.boolValue = true;
+        m_time4.overrideState.boolValue = true;
+        m_time5.overrideState.boolValue = true;
+        m_time6.overrideState.boolValue = true;
+        m_time7.overrideState.boolValue = true;
+
+        m_time0s.overrideState.boolValue = true;
+        m_time1s.overrideState.boolValue = true;
+        m_time2s.overrideState.boolValue = true;
+        m_time3s.overrideState.boolValue = true;
+        m_time4s.overrideState.boolValue = true;
+        m_time5s.overrideState.boolValue = true;
+        m_time6s.overrideState.boolValue = true;
+        m_time7s.overrideState.boolValue = true;
+
         m_key0.value.colorValue = new Color(
            colorKeys[0].color.r,
            colorKeys[0].color.g,

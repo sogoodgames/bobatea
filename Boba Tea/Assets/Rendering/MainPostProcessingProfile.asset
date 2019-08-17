@@ -14,7 +14,104 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - {fileID: 1845428618320073712}
-  - {fileID: 4964689902761474853}
+  - {fileID: 5616678352321249617}
+--- !u!114 &77915684768072977
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: DayCycleSettings
+  m_EditorClassIdentifier: Assembly-CSharp::DayCycleSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  time:
+    overrideState: 1
+    value: 10.7
+  minTime:
+    overrideState: 1
+    value: 0
+  maxTime:
+    overrideState: 1
+    value: 24
+  key0:
+    overrideState: 0
+    value: {r: 0.26138687, g: 0, b: 1, a: 1}
+  key1:
+    overrideState: 0
+    value: {r: 1, g: 0, b: 0.97566557, a: 1}
+  key2:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key3:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key4:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key5:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key6:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key7:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 0}
+  time0:
+    overrideState: 0
+    value: 0
+  time1:
+    overrideState: 0
+    value: 1
+  time2:
+    overrideState: 0
+    value: -1
+  time3:
+    overrideState: 0
+    value: -1
+  time4:
+    overrideState: 0
+    value: -1
+  time5:
+    overrideState: 0
+    value: -1
+  time6:
+    overrideState: 0
+    value: -1
+  time7:
+    overrideState: 0
+    value: -1
+  time0s:
+    overrideState: 0
+    value: 0
+  time1s:
+    overrideState: 0
+    value: 1
+  time2s:
+    overrideState: 0
+    value: -1
+  time3s:
+    overrideState: 0
+    value: -1
+  time4s:
+    overrideState: 0
+    value: -1
+  time5s:
+    overrideState: 0
+    value: -1
+  time6s:
+    overrideState: 0
+    value: -1
+  time7s:
+    overrideState: 0
+    value: -1
 --- !u!114 &1123936361341016886
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -124,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -164,10 +261,10 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 1
-    value: 2
+    overrideState: 0
+    value: -40.2
   tint:
-    overrideState: 1
+    overrideState: 0
     value: 1
   colorFilter:
     overrideState: 0
@@ -1538,7 +1635,7 @@ MonoBehaviour:
     value: 1
   time:
     overrideState: 1
-    value: 24
+    value: 11.7
   minTime:
     overrideState: 1
     value: 0
@@ -1553,7 +1650,7 @@ MonoBehaviour:
     value: {r: 0.8596177, g: 0.78039217, b: 0.9137255, a: 1}
   key2:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 0}
+    value: {r: 1, g: 1, b: 1, a: 1}
   key3:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 0}
@@ -1598,10 +1695,10 @@ MonoBehaviour:
     value: 0
   time1s:
     overrideState: 0
-    value: 1
+    value: 0.57059586
   time2s:
     overrideState: 0
-    value: -1
+    value: 1
   time3s:
     overrideState: 0
     value: -1
@@ -1616,4 +1713,101 @@ MonoBehaviour:
     value: -1
   time7s:
     overrideState: 0
+    value: -1
+--- !u!114 &5616678352321249617
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: DayCycleSettings
+  m_EditorClassIdentifier: Assembly-CSharp::DayCycleSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  time:
+    overrideState: 1
+    value: 11.2
+  minTime:
+    overrideState: 1
+    value: 0
+  maxTime:
+    overrideState: 1
+    value: 24
+  key0:
+    overrideState: 1
+    value: {r: 0, g: 1, b: 0.2262168, a: 1}
+  key1:
+    overrideState: 1
+    value: {r: 1, g: 0, b: 0, a: 0}
+  key2:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key3:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key4:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key5:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key6:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  key7:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  time0:
+    overrideState: 1
+    value: 0
+  time1:
+    overrideState: 1
+    value: 1
+  time2:
+    overrideState: 1
+    value: -1
+  time3:
+    overrideState: 1
+    value: -1
+  time4:
+    overrideState: 1
+    value: -1
+  time5:
+    overrideState: 1
+    value: -1
+  time6:
+    overrideState: 1
+    value: -1
+  time7:
+    overrideState: 1
+    value: -1
+  time0s:
+    overrideState: 1
+    value: 0
+  time1s:
+    overrideState: 1
+    value: 1
+  time2s:
+    overrideState: 1
+    value: -1
+  time3s:
+    overrideState: 1
+    value: -1
+  time4s:
+    overrideState: 1
+    value: -1
+  time5s:
+    overrideState: 1
+    value: -1
+  time6s:
+    overrideState: 1
+    value: -1
+  time7s:
+    overrideState: 1
     value: -1

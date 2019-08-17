@@ -133,7 +133,7 @@ half4 DayCycleFrag(BasicVertexOutput i) : SV_Target
 
     // apply tint and saturation
     color *= tint;
-    //color = Saturation(color, saturation); 
+    color = Saturation(color, saturation); 
 
     return half4(color, 1.0);
 }

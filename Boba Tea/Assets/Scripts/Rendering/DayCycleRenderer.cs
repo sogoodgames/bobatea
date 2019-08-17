@@ -59,7 +59,6 @@ public class DayCycleRenderer : PostProcessEffectRenderer<DayCycleSettings>
 
         sheet.properties.SetFloat("_Time0s", settings.time0s);
         sheet.properties.SetFloat("_Time1s", settings.time1s);
-        Debug.Log("time1s:" + settings.time1s.value);
         sheet.properties.SetFloat("_Time2s", settings.time2s);
         sheet.properties.SetFloat("_Time3s", settings.time3s);
         sheet.properties.SetFloat("_Time4s", settings.time4s);
