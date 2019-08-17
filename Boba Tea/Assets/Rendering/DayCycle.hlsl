@@ -9,8 +9,14 @@
 TEXTURE2D_SAMPLER2D(_MainTex, sampler_MainTex);
 // Material properties
 float _DayTime;
+float _MaxTime;
+float _MinTime;
+
 float _Saturation;
 float3 _Tint;
+
+float _Saturation2;
+float3 _Tint2;
 
 struct BasicVertexInput {
     float4 vertex : POSITION;
@@ -28,7 +34,13 @@ float between (float min, float max, float t) {
 
 // Blends colors a and b based on t's position between min and max
 // Returns black if t is not inside min & max
-float3 BlendInRange (float t, float min, float max, float3 a, float3 b) {
+half3 BlendInRange (float t, float min, float max, half3 a, half3 b) {
+    float blend = (t - min) / (max - min);
+    blend = clamp(blend, 0.0, 1.0);
+    return between(min, max, t) * lerp(a, b, blend);
+}
+
+float BlendInRange (float t, float min, float max, float a, float b) {
     float blend = (t - min) / (max - min);
     blend = clamp(blend, 0.0, 1.0);
     return between(min, max, t) * lerp(a, b, blend);
@@ -57,21 +69,21 @@ BasicVertexOutput DayCycleVertex(BasicVertexInput i) {
     return o;
 }
 
-float4 DayCycleFrag(BasicVertexOutput i) : SV_Target
+half4 DayCycleFrag(BasicVertexOutput i) : SV_Target
 {
     // regular color 
-    float3 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.screenPos).rgb;
+    half3 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.screenPos).rgb;
     color = NeutralTonemap(color);
 
     // get blended value for tint and saturation
-    float3 tint = _Tint.rgb;
-    float saturation = _Saturation;
+    half3 tint = BlendInRange(_DayTime, _MinTime, _MaxTime, _Tint.rgb, _Tint2.rgb);
+    float saturation = BlendInRange(_DayTime, _MinTime, _MaxTime, _Saturation, _Saturation2);
 
     // apply tint and saturation
     color *= tint;
     color = Saturation(color, saturation); 
 
-    return float4(color, 1.0);
+    return half4(color, 1.0);
 }
 
 #endif //DAY_CYCLE
