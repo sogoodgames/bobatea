@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace BobaTea {
 
     public class Timer : MonoBehaviour
     {
         public GameController GameController;
+        public PostProcessVolume PostProcessVolume; 
 
         [Tooltip("Number of seconds it takes a day to complete.")]
         public float TimeScale = 60.0f;
         [Tooltip("Time of day (in hours) for the game to start at.")]
         public float StartTime = 12.0f;
         
+        private DayCycleSettings _dayCycleSettings;
+
         private const float _maxTime = 24.0f;
 
         private float _timeReal;
@@ -25,6 +29,9 @@ namespace BobaTea {
             GameController.GameStart += HandleGameStart;
             GameController.GamePause += HandleGamePause;
             GameController.GameEnd += HandleGameEnd;
+
+            PostProcessProfile profile = PostProcessVolume.sharedProfile;
+            _dayCycleSettings = profile.GetSetting<DayCycleSettings>();
         }
 
         void Update()
@@ -36,6 +43,10 @@ namespace BobaTea {
             _timeReal += Time.deltaTime;
             //Debug.Log("time, seconds: " + _timeReal);
             //Debug.Log("time, in-game hours: " + TimeHours);
+
+            // I wish the pp effect could query the timer, but whatever
+            _dayCycleSettings.time.Override(new FloatParameter{value = TimeHours});
+
             if(TimeHours > _maxTime) {
                 _timeReal = 0.0f;
                 //Debug.Log("new day");
