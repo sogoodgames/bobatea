@@ -1732,7 +1732,7 @@ MonoBehaviour:
     value: 1
   time:
     overrideState: 1
-    value: 11.2
+    value: 10.1
   minTime:
     overrideState: 1
     value: 0
@@ -1741,25 +1741,25 @@ MonoBehaviour:
     value: 24
   key0:
     overrideState: 1
-    value: {r: 0, g: 1, b: 0.2262168, a: 1}
+    value: {r: 0.49461555, g: 0.5275578, b: 0.6132076, a: 0.78431374}
   key1:
     overrideState: 1
-    value: {r: 1, g: 0, b: 0, a: 0}
+    value: {r: 1, g: 0.84403217, b: 0.7783019, a: 1}
   key2:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 0}
+    value: {r: 1, g: 1, b: 1, a: 1}
   key3:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 0}
+    value: {r: 1, g: 1, b: 1, a: 1}
   key4:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 0}
+    value: {r: 1, g: 1, b: 1, a: 1}
   key5:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 0}
+    value: {r: 0.7783289, g: 0.6536134, b: 0.9056604, a: 0}
   key6:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 0}
+    value: {r: 0.49803922, g: 0.5294118, b: 0.6156863, a: 0}
   key7:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 0}
@@ -1768,22 +1768,22 @@ MonoBehaviour:
     value: 0
   time1:
     overrideState: 1
-    value: 1
+    value: 0.11764706
   time2:
     overrideState: 1
-    value: -1
+    value: 0.25294882
   time3:
     overrideState: 1
-    value: -1
+    value: 0.5088273
   time4:
     overrideState: 1
-    value: -1
+    value: 0.75883114
   time5:
     overrideState: 1
-    value: -1
+    value: 0.88529795
   time6:
     overrideState: 1
-    value: -1
+    value: 1
   time7:
     overrideState: 1
     value: -1
@@ -1792,16 +1792,16 @@ MonoBehaviour:
     value: 0
   time1s:
     overrideState: 1
-    value: 1
+    value: 0.26471353
   time2s:
     overrideState: 1
-    value: -1
+    value: 0.5147021
   time3s:
     overrideState: 1
-    value: -1
+    value: 0.7558862
   time4s:
     overrideState: 1
-    value: -1
+    value: 1
   time5s:
     overrideState: 1
     value: -1
