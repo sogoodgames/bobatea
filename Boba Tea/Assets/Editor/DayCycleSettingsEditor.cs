@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using UnityEditor;
 using UnityEditor.Rendering.PostProcessing;
@@ -77,31 +78,28 @@ namespace BobaTea {
             m_time6s = FindParameterOverride(x => x.time6s);
             m_time7s = FindParameterOverride(x => x.time7s);
 
+            List<GradientColorKey> colorKeys = new List<GradientColorKey>();
+            if(m_time0.value.floatValue >= 0) colorKeys.Add(new GradientColorKey(m_key0.value.colorValue, m_time0.value.floatValue));
+            if(m_time1.value.floatValue >= 0) colorKeys.Add(new GradientColorKey(m_key1.value.colorValue, m_time1.value.floatValue));
+            if(m_time2.value.floatValue >= 0) colorKeys.Add(new GradientColorKey(m_key2.value.colorValue, m_time2.value.floatValue));
+            if(m_time3.value.floatValue >= 0) colorKeys.Add(new GradientColorKey(m_key3.value.colorValue, m_time3.value.floatValue));
+            if(m_time4.value.floatValue >= 0) colorKeys.Add(new GradientColorKey(m_key4.value.colorValue, m_time4.value.floatValue));
+            if(m_time5.value.floatValue >= 0) colorKeys.Add(new GradientColorKey(m_key5.value.colorValue, m_time5.value.floatValue));
+            if(m_time6.value.floatValue >= 0) colorKeys.Add(new GradientColorKey(m_key6.value.colorValue, m_time6.value.floatValue));
+            if(m_time7.value.floatValue >= 0) colorKeys.Add(new GradientColorKey(m_key7.value.colorValue, m_time7.value.floatValue));
+
+            List<GradientAlphaKey> alphaKeys = new List<GradientAlphaKey>();
+            if(m_time0s.value.floatValue >= 0) alphaKeys.Add(new GradientAlphaKey(m_key0.value.colorValue.a, m_time0s.value.floatValue));
+            if(m_time1s.value.floatValue >= 0) alphaKeys.Add(new GradientAlphaKey(m_key1.value.colorValue.a, m_time1s.value.floatValue));
+            if(m_time2s.value.floatValue >= 0) alphaKeys.Add(new GradientAlphaKey(m_key2.value.colorValue.a, m_time2s.value.floatValue));
+            if(m_time3s.value.floatValue >= 0) alphaKeys.Add(new GradientAlphaKey(m_key3.value.colorValue.a, m_time3s.value.floatValue));
+            if(m_time4s.value.floatValue >= 0) alphaKeys.Add(new GradientAlphaKey(m_key4.value.colorValue.a, m_time4s.value.floatValue));
+            if(m_time5s.value.floatValue >= 0) alphaKeys.Add(new GradientAlphaKey(m_key5.value.colorValue.a, m_time5s.value.floatValue));
+            if(m_time6s.value.floatValue >= 0) alphaKeys.Add(new GradientAlphaKey(m_key6.value.colorValue.a, m_time6s.value.floatValue));
+            if(m_time7s.value.floatValue >= 0) alphaKeys.Add(new GradientAlphaKey(m_key7.value.colorValue.a, m_time7s.value.floatValue));
+
             gradient = new Gradient();
-
-            GradientColorKey[] colorKeys = new GradientColorKey[] {
-                new GradientColorKey(m_key0.value.colorValue, m_time0.value.floatValue),
-                new GradientColorKey(m_key1.value.colorValue, m_time1.value.floatValue),
-                new GradientColorKey(m_key2.value.colorValue, m_time2.value.floatValue),
-                new GradientColorKey(m_key3.value.colorValue, m_time3.value.floatValue),
-                new GradientColorKey(m_key4.value.colorValue, m_time4.value.floatValue),
-                new GradientColorKey(m_key5.value.colorValue, m_time5.value.floatValue),
-                new GradientColorKey(m_key6.value.colorValue, m_time6.value.floatValue),
-                new GradientColorKey(m_key7.value.colorValue, m_time7.value.floatValue)
-            };
-
-            GradientAlphaKey[] alphaKeys = new GradientAlphaKey [] {
-                new GradientAlphaKey(m_key0.value.colorValue.a, m_time0s.value.floatValue),
-                new GradientAlphaKey(m_key1.value.colorValue.a, m_time1s.value.floatValue),
-                new GradientAlphaKey(m_key2.value.colorValue.a, m_time2s.value.floatValue),
-                new GradientAlphaKey(m_key3.value.colorValue.a, m_time3s.value.floatValue),
-                new GradientAlphaKey(m_key4.value.colorValue.a, m_time4s.value.floatValue),
-                new GradientAlphaKey(m_key5.value.colorValue.a, m_time5s.value.floatValue),
-                new GradientAlphaKey(m_key6.value.colorValue.a, m_time6s.value.floatValue),
-                new GradientAlphaKey(m_key7.value.colorValue.a, m_time7s.value.floatValue)
-            };
-
-            gradient.SetKeys(colorKeys, alphaKeys);
+            gradient.SetKeys(colorKeys.ToArray(), alphaKeys.ToArray());
         }
 
         public override void OnInspectorGUI () {
