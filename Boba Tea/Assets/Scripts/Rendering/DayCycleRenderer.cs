@@ -6,7 +6,7 @@ namespace BobaTea {
 
     [Serializable]
     [PostProcess(typeof(DayCycleRenderer), PostProcessEvent.AfterStack, "Custom/DayNightCycle")]
-    public sealed class DayCycleSettings : PostProcessEffectSettings
+    public class DayCycleSettings : PostProcessEffectSettings
     {
         [Range(0f, 24f), Tooltip("Normalized time of day.")]
         public FloatParameter time = new FloatParameter {value = 12.0f};

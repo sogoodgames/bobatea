@@ -109,7 +109,15 @@ namespace BobaTea {
             PropertyField(m_minTime);
             PropertyField(m_maxTime);
 
-            gradient = EditorGUILayout.GradientField("Color and Saturation Gradient", gradient);
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
+
+            EditorGUILayout.LabelField("Color and Saturation Gradient", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Color key = tint color (multiplied)");
+            EditorGUILayout.LabelField("Alpha key = saturation");
+            EditorGUILayout.LabelField("Max of 8 color keys and 8 alpha keys.");
+
+            gradient = EditorGUILayout.GradientField("Gradient", gradient);
             SetGradientValues();
         }
 
