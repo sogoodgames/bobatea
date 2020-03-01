@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c36a9b8eb85394cb59f214ce6f6a7d, type: 3}
+  m_Name: Data_DrinkRequest_TEST
+  m_EditorClassIdentifier: 
+  Tags: 
+  Flavors:
+  - Flavor: 0
+    Min: 8
+    Max: 1000
+  - Flavor: 3
+    Min: 1
+    Max: 3
+  Ingredients:
+  - {fileID: 11400000, guid: 1b77035c53ed4594eaf8705e1c481bc3, type: 2}
