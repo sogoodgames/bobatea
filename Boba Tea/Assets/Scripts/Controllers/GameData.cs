@@ -32,28 +32,28 @@ public class GameData : MonoBehaviour
     // ------------------------------------------------------------------------
     public List<CharacterData> Characters {
         get {
-            if(!m_initialized) Assert.IsTrue(m_initialized); return null;
+            if(!m_initialized) {Assert.IsTrue(m_initialized); return null;}
             return m_charactersInstanced;
         }
     }
 
     public List<SpellData> Spells {
         get {
-            if(!m_initialized) Assert.IsTrue(m_initialized); return null;
+            if(!m_initialized) {Assert.IsTrue(m_initialized); return null;}
             return m_spellsInstanced;
         }
     }
 
     public List<DemonData> Demons {
         get {
-            if(!m_initialized) Assert.IsTrue(m_initialized); return null;
+            if(!m_initialized) {Assert.IsTrue(m_initialized); return null;}
             return m_demonsInstanced;
         }
     }
 
     public List<IngredientData> Ingredients {
         get {
-            if(!m_initialized) Assert.IsTrue(m_initialized); return null;
+            if(!m_initialized) {Assert.IsTrue(m_initialized); return null;}
             return m_ingredientsInstanced;
         }
     }
