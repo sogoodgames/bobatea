@@ -11,6 +11,7 @@ public class IngredientData : ScriptableObject
     public Flavor Flavor;
     public int Value; // # points contributed to category
     public int Amount; // # of instances of this card in a deck
+    public DemonData Demon;
 
     // TODO: activated effect
 }

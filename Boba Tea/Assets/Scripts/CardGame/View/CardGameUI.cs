@@ -19,7 +19,8 @@ public class CardGameUI : MonoBehaviour
     // Functions
     // ------------------------------------------------------------------------
     public void StartGame (
-        SpellData[] spells
+        SpellData[] spells,
+        IngredientData[] startingHand
     ) {
         PopulateSpellCards(spells);
     }
@@ -39,5 +40,10 @@ public class CardGameUI : MonoBehaviour
                 Assert.IsNotNull(spellUI);
             }
         }
+    }
+
+    // ------------------------------------------------------------------------
+    private void PopulateHand (IngredientData[] ingredients) {
+        Assert.IsTrue(ingredients.Length == CardGameController.c_handSize);
     }
 }

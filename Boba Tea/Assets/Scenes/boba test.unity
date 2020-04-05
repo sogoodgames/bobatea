@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6a00d68e2c9ef43899aea6699becc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_playerData: {fileID: 11400000, guid: 484ef7afac82d99448c445308f2beae6, type: 2}
   m_characters:
   - {fileID: 11400000, guid: 9fcbdc2197ea3694c988d770fb84fdd0, type: 2}
   m_spells:
@@ -1523,7 +1524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2702125, y: 0}
   m_AnchorMax: {x: 0.90700006, y: 0.18343513}
-  m_AnchoredPosition: {x: 0.00012207031, y: -0.024169922}
+  m_AnchoredPosition: {x: 0.00012207031, y: -0.023925781}
   m_SizeDelta: {x: 0, y: 0.048187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760074577

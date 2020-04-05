@@ -12,6 +12,8 @@ public class GameData : MonoBehaviour
     // Variables
     // ------------------------------------------------------------------------
     [SerializeField]
+    private PlayerData m_playerData;
+    [SerializeField]
     private List<CharacterData> m_characters;
     [SerializeField]
     private List<SpellData> m_spells;
@@ -20,6 +22,7 @@ public class GameData : MonoBehaviour
     [SerializeField]
     private List<IngredientData> m_ingredients;
 
+    private PlayerData m_playerDataInstanced;
     private List<CharacterData> m_charactersInstanced;
     private List<SpellData> m_spellsInstanced;
     private List<DemonData> m_demonsInstanced;
@@ -30,6 +33,12 @@ public class GameData : MonoBehaviour
     // ------------------------------------------------------------------------
     // Properties
     // ------------------------------------------------------------------------
+    public PlayerData PlayerData {
+        get {
+            return m_playerDataInstanced;
+        }
+    }
+
     public List<CharacterData> Characters {
         get {
             if(!m_initialized) {Assert.IsTrue(m_initialized); return null;}
@@ -62,6 +71,8 @@ public class GameData : MonoBehaviour
     // Functions
     // ------------------------------------------------------------------------
     public void Init () {
+        m_playerDataInstanced = Instantiate(m_playerData);
+
         m_charactersInstanced = new List<CharacterData>();
         foreach(CharacterData c in m_characters) {
             m_charactersInstanced.Add(Instantiate(c));

@@ -17,3 +17,4 @@ MonoBehaviour:
   Flavor: 2
   Value: 1
   Amount: 6
+  Demon: {fileID: 11400000, guid: 7d1c22f365e363248b50aa46b9c9d3fa, type: 2}

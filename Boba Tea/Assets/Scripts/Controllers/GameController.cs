@@ -11,8 +11,9 @@ public class GameController : MonoBehaviour
     // ------------------------------------------------------------------------
     public GameData GameData;
 
-    // TODO: test- might remove later
     public CardGameController CardGameController;
+
+    // TODO: test- remove later
     public CharacterData TEST_StartCharacter;
     public SpellData[] TEST_StartSpells;
 
@@ -23,10 +24,12 @@ public class GameController : MonoBehaviour
         GameData.Init();
 
         // TODO: TEST -- forcing game to start at card game, remove later
+        // TODO: TEST -- forcing input ingredients to player's entire deck
         CardGameController.StartGame(
             TEST_StartCharacter,
             TEST_StartCharacter.DrinkRequests[0],
-            TEST_StartSpells
+            TEST_StartSpells,
+            GameData.PlayerData.Ingredients
         );
     }
 }
